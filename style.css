@@ -16,7 +16,35 @@ a { color: inherit; text-decoration: none; }
 .hero-inner { display: grid; grid-template-columns: 1fr 320px; gap: 80px; align-items: center; }
 .hero-copy h1 { font-size: 32px; letter-spacing: 0.04em; margin: 0 0 12px; }
 .hero-copy p { margin: 0; font-size: 14px; color: rgba(24,7,7,0.85); }
-.hero-mark { width: 160px; height: 160px; border-radius: 9999px; background: #FF3702; justify-self: center; box-shadow: 0 10px 24px rgba(0,0,0,0.08); will-change: transform, box-shadow; transition: box-shadow 0.25s ease; }
+.hero-mark { 
+  width: 160px; 
+  height: 160px; 
+  background: #FF3702; 
+  justify-self: center; 
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08); 
+  will-change: transform, box-shadow; 
+  transition: box-shadow 0.25s ease;
+  animation: morphShape 9s ease-in-out infinite;
+}
+
+@keyframes morphShape {
+  0% { 
+    border-radius: 50%; 
+    clip-path: circle(50% at 50% 50%);
+  }
+  33.33% { 
+    border-radius: 0%; 
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  66.66% { 
+    border-radius: 0%; 
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  100% { 
+    border-radius: 50%; 
+    clip-path: circle(50% at 50% 50%);
+  }
+}
 .scroll-indicator { display: none; }
 /* sentinel no longer used */
 .arrow-pin-sentinel { display: none; }
