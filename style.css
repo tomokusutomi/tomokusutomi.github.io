@@ -94,44 +94,38 @@ a { color: inherit; text-decoration: none; }
   76% {
     clip-path: polygon(15% 15%, 15% 85%, 85% 85%, 85% 15%);
   }
-  68% {
-    clip-path: polygon(16% 16%, 16% 84%, 84% 84%, 84% 16%);
-  }
-  70% {
+  78% {
     clip-path: polygon(18% 18%, 18% 82%, 82% 82%, 82% 18%);
   }
-  72% {
+  80% {
     clip-path: polygon(22% 22%, 22% 78%, 78% 78%, 78% 22%);
   }
-  74% {
+  82% {
     clip-path: polygon(26% 26%, 26% 74%, 74% 74%, 74% 26%);
   }
-  76% {
+  84% {
     clip-path: polygon(30% 30%, 30% 70%, 70% 70%, 70% 30%);
   }
-  78% {
+  86% {
     clip-path: polygon(35% 35%, 35% 65%, 65% 65%, 65% 35%);
   }
-  80% {
-    clip-path: polygon(40% 30%, 30% 70%, 70% 70%, 60% 30%);
-  }
-  82% {
-    clip-path: polygon(45% 25%, 25% 75%, 75% 75%, 55% 25%);
-  }
-  84% {
-    clip-path: polygon(50% 20%, 22% 78%, 78% 78%, 50% 20%);
-  }
-  86% {
-    clip-path: polygon(50% 25%, 25% 75%, 75% 75%);
-  }
   88% {
-    clip-path: polygon(50% 30%, 30% 70%, 70% 70%);
+    clip-path: polygon(40% 40%, 40% 60%, 60% 60%, 60% 40%);
   }
   90% {
-    clip-path: polygon(50% 35%, 35% 65%, 65% 65%);
+    clip-path: polygon(45% 45%, 45% 55%, 55% 55%, 55% 45%);
   }
-  95% {
+  92% {
+    clip-path: circle(47% at 50% 50%);
+  }
+  94% {
     clip-path: circle(48% at 50% 50%);
+  }
+  96% {
+    clip-path: circle(49% at 50% 50%);
+  }
+  98% {
+    clip-path: circle(49.5% at 50% 50%);
   }
   100% { 
     clip-path: circle(50% at 50% 50%);
@@ -261,31 +255,40 @@ a { color: inherit; text-decoration: none; }
     clip-path: polygon(32% 32%, 32% 68%, 68% 68%, 68% 32%);
   }
   76% {
-    clip-path: polygon(35% 35%, 35% 65%, 65% 65%, 65% 35%);
+    clip-path: polygon(20% 20%, 20% 80%, 80% 80%, 80% 20%);
   }
   78% {
-    clip-path: polygon(38% 38%, 38% 62%, 62% 62%, 62% 38%);
+    clip-path: polygon(23% 23%, 23% 77%, 77% 77%, 77% 23%);
   }
   80% {
-    clip-path: polygon(42% 35%, 35% 65%, 65% 65%, 58% 35%);
+    clip-path: polygon(26% 26%, 26% 74%, 74% 74%, 74% 26%);
   }
   82% {
-    clip-path: polygon(47% 30%, 30% 70%, 70% 70%, 53% 30%);
+    clip-path: polygon(30% 30%, 30% 70%, 70% 70%, 70% 30%);
   }
   84% {
-    clip-path: polygon(50% 25%, 27% 75%, 73% 75%, 50% 25%);
+    clip-path: polygon(33% 33%, 33% 67%, 67% 67%, 67% 33%);
   }
   86% {
-    clip-path: polygon(50% 30%, 30% 70%, 70% 70%);
+    clip-path: polygon(36% 36%, 36% 64%, 64% 64%, 64% 36%);
   }
   88% {
-    clip-path: polygon(50% 35%, 35% 65%, 65% 65%);
+    clip-path: polygon(40% 40%, 40% 60%, 60% 60%, 60% 40%);
   }
   90% {
-    clip-path: polygon(50% 40%, 40% 60%, 60% 60%);
+    clip-path: polygon(42% 42%, 42% 58%, 58% 58%, 58% 42%);
   }
-  95% {
+  92% {
+    clip-path: circle(42% at 50% 50%);
+  }
+  94% {
     clip-path: circle(43% at 50% 50%);
+  }
+  96% {
+    clip-path: circle(44% at 50% 50%);
+  }
+  98% {
+    clip-path: circle(44.5% at 50% 50%);
   }
   100% { 
     clip-path: circle(45% at 50% 50%);
