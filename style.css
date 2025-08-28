@@ -177,7 +177,114 @@ a { color: inherit; text-decoration: none; }
 .line-reveal { display: block; opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease; }
 .line-reveal.is-visible { opacity: 1; transform: none; }
 
-/* Shape morphing animation is now unified for all devices */
+/* Mobile-specific shape morphing animation with safer coordinates */
+@keyframes morphShapeMobile {
+  0% { 
+    clip-path: circle(45% at 50% 50%);
+  }
+  10% {
+    clip-path: polygon(50% 40%, 37% 63%, 63% 63%);
+  }
+  15% {
+    clip-path: polygon(50% 35%, 33% 67%, 67% 67%);
+  }
+  20% {
+    clip-path: polygon(50% 30%, 30% 70%, 70% 70%);
+  }
+  25% {
+    clip-path: polygon(50% 25%, 27% 75%, 73% 75%);
+  }
+  30% {
+    clip-path: polygon(50% 22%, 25% 78%, 75% 78%);
+  }
+  33.33% {
+    clip-path: polygon(50% 20%, 23% 80%, 77% 80%);
+  }
+  36% {
+    clip-path: polygon(48% 22%, 22% 78%, 74% 80%);
+  }
+  38% {
+    clip-path: polygon(45% 25%, 20% 75%, 70% 78%);
+  }
+  40% {
+    clip-path: polygon(40% 30%, 20% 70%, 65% 75%);
+  }
+  42% {
+    clip-path: polygon(35% 35%, 20% 65%, 60% 72%);
+  }
+  44% {
+    clip-path: polygon(32% 37%, 22% 63%, 58% 70%);
+  }
+  46% {
+    clip-path: polygon(30% 35%, 25% 60%, 55% 67%);
+  }
+  48% {
+    clip-path: polygon(28% 33%, 27% 58%, 53% 65%);
+  }
+  50% {
+    clip-path: polygon(30% 30%, 30% 70%, 70% 70%, 70% 30%);
+  }
+  52% {
+    clip-path: polygon(28% 28%, 28% 72%, 72% 72%, 72% 28%);
+  }
+  54% {
+    clip-path: polygon(25% 25%, 25% 75%, 75% 75%, 75% 25%);
+  }
+  56% {
+    clip-path: polygon(23% 23%, 23% 77%, 77% 77%, 77% 23%);
+  }
+  58% {
+    clip-path: polygon(22% 22%, 22% 78%, 78% 78%, 78% 22%);
+  }
+  60% {
+    clip-path: polygon(20% 20%, 20% 80%, 80% 80%, 80% 20%);
+  }
+  66.66% {
+    clip-path: polygon(20% 20%, 20% 80%, 80% 80%, 80% 20%);
+  }
+  68% {
+    clip-path: polygon(22% 22%, 22% 78%, 78% 78%, 78% 22%);
+  }
+  70% {
+    clip-path: polygon(25% 25%, 25% 75%, 75% 75%, 75% 25%);
+  }
+  72% {
+    clip-path: polygon(28% 28%, 28% 72%, 72% 72%, 72% 28%);
+  }
+  74% {
+    clip-path: polygon(32% 32%, 32% 68%, 68% 68%, 68% 32%);
+  }
+  76% {
+    clip-path: polygon(35% 35%, 35% 65%, 65% 65%, 65% 35%);
+  }
+  78% {
+    clip-path: polygon(38% 38%, 38% 62%, 62% 62%, 62% 38%);
+  }
+  80% {
+    clip-path: polygon(42% 35%, 35% 65%, 65% 65%, 58% 35%);
+  }
+  82% {
+    clip-path: polygon(47% 30%, 30% 70%, 70% 70%, 53% 30%);
+  }
+  84% {
+    clip-path: polygon(50% 25%, 27% 75%, 73% 75%, 50% 25%);
+  }
+  86% {
+    clip-path: polygon(50% 30%, 30% 70%, 70% 70%);
+  }
+  88% {
+    clip-path: polygon(50% 35%, 35% 65%, 65% 65%);
+  }
+  90% {
+    clip-path: polygon(50% 40%, 40% 60%, 60% 60%);
+  }
+  95% {
+    clip-path: circle(43% at 50% 50%);
+  }
+  100% { 
+    clip-path: circle(45% at 50% 50%);
+  }
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -187,7 +294,11 @@ a { color: inherit; text-decoration: none; }
   .services .container, .company .container, .contact .container { padding-left: 40px; padding-right: 24px; }
   .hero-inner { grid-template-columns: 1fr; gap: 64px; }
   .hero { min-height: calc(100vh - 64px); padding-bottom: 0; }
-  .hero-mark { width: 120px; height: 120px; animation: morphShape 18s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+  .hero-mark { 
+    width: 120px; 
+    height: 120px; 
+    animation: morphShapeMobile 18s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; 
+  }
   /* Header logo 40px from left edge on smartphones */
   .header .container { padding-left: 40px; padding-right: 24px; }
   .brand { left: 40px; }
