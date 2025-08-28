@@ -22,26 +22,37 @@ a { color: inherit; text-decoration: none; }
   background: #FF3702; 
   justify-self: center; 
   box-shadow: 0 10px 24px rgba(0,0,0,0.08); 
-  will-change: transform, box-shadow; 
+  will-change: transform, box-shadow, clip-path; 
   transition: box-shadow 0.25s ease;
-  animation: morphShape 9s ease-in-out infinite;
+  animation: morphShape 12s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 @keyframes morphShape {
   0% { 
-    border-radius: 50%; 
     clip-path: circle(50% at 50% 50%);
   }
+  16.66% {
+    clip-path: circle(45% at 50% 55%);
+  }
   33.33% { 
-    border-radius: 0%; 
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 15%, 20% 85%, 80% 85%);
+  }
+  41.66% {
+    clip-path: polygon(50% 10%, 15% 85%, 85% 85%);
+  }
+  50% {
+    clip-path: polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%);
   }
   66.66% { 
-    border-radius: 0%; 
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
+  }
+  75% {
+    clip-path: polygon(15% 15%, 85% 15%, 85% 85%, 15% 85%);
+  }
+  83.33% {
+    clip-path: circle(45% at 50% 50%);
   }
   100% { 
-    border-radius: 50%; 
     clip-path: circle(50% at 50% 50%);
   }
 }
