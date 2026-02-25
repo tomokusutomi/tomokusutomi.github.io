@@ -160,7 +160,9 @@ a { color: inherit; text-decoration: none; }
 /* Contact section aligns to same left edge */
 .contact .section-inner { text-align: left; }
 .contact .section-title { display: flex; align-items: center; gap: 8px; }
-.contact .contact-mail { margin-top: 16px; }
+.contact-form-wrap { margin-top: 24px; max-width: 640px; }
+.contact-form-wrap iframe { border: none; border-radius: 8px; background: #fff; }
+.contact .contact-mail { margin-top: 24px; }
 .note { margin-top: 12px; font-size: 14px; color: rgba(24,7,7,0.6); }
 .contact-mail a { text-decoration: underline; font-weight: 500; }
 
@@ -298,6 +300,7 @@ a { color: inherit; text-decoration: none; }
   .brand { left: 40px; }
   /* Slightly tighter vertical rhythm on mobile */
   .section-inner { padding: 40px 0; }
+  .contact-form-wrap iframe { height: 900px; }
   /* Hero text centered on mobile; use safe side paddings instead of 80px */
   .hero .container { padding-left: 24px; padding-right: 24px; margin: 0 auto; }
   .hero-inner { justify-items: center; text-align: center; align-content: center; }
