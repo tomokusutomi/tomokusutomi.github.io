@@ -43,12 +43,12 @@ a { color: inherit; text-decoration: none; }
 /* Intro / Services detail / Works / Founder / FAQ */
 .intro .section-inner, .works .section-inner, .founder .section-inner, .faq .section-inner { text-align: left; }
 .intro .section-title, .works .section-title, .founder .section-title, .faq .section-title { display: flex; align-items: center; gap: 8px; }
-.intro p, .works p, .founder p, .faq dd { max-width: 720px; }
-.lead { font-size: 16px; font-weight: 500; line-height: 2.1; margin: 8px 0 12px; }
+.intro p, .works p, .founder p, .faq dd, .service-detail dd { font-size: 15px; line-height: 2.2; }
+.lead { font-size: 17px; font-weight: 500; line-height: 2.1; margin: 8px 0 12px; }
 .lead strong { color: #FF3702; font-weight: 700; }
 .service { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(24,7,7,0.1); }
 .service h3, .works h3 { font-size: 17px; letter-spacing: 0.03em; margin: 0 0 8px; }
-.service-detail { margin: 0; display: grid; grid-template-columns: 7.5em 1fr; column-gap: 16px; row-gap: 4px; max-width: 760px; }
+.service-detail { margin: 0; display: grid; grid-template-columns: 7.5em 1fr; column-gap: 16px; row-gap: 4px; }
 .service-detail dt { font-weight: 500; color: rgba(24,7,7,0.6); }
 .service-detail dd { margin: 0; }
 .works-group { font-size: 15px; font-weight: 500; color: rgba(24,7,7,0.6); margin: 32px 0 0; letter-spacing: 0.04em; }
