@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nagasaki-kikaku.com/sitemap.xml
+Sitemap: https://www.nagasaki-kikaku.com/sitemap.xml
