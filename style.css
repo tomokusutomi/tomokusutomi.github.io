@@ -64,10 +64,11 @@ a { color: inherit; text-decoration: none; }
 /* Company section aligns to same left edge */
 .company .section-inner { text-align: left; }
 .company .section-title { display: flex; align-items: center; gap: 8px; }
-.company-table { margin-top: 16px; border-collapse: collapse; width: 100%; max-width: 500px; }
+.company-table { margin-top: 16px; border-collapse: collapse; width: 100%; max-width: 680px; }
 .company-table th, .company-table td { padding: 12px 16px; text-align: left; font-size: 14px; border-bottom: 1px solid rgba(24,7,7,0.1); }
-.company-table th { font-weight: 500; color: #180707; width: 40%; }
+.company-table th { font-weight: 500; color: #180707; width: 30%; white-space: nowrap; }
 .company-table td { color: #180707; }
+.nowrap { white-space: nowrap; }
 
 /* Contact section aligns to same left edge */
 .contact .section-inner { text-align: left; }
@@ -106,6 +107,10 @@ a { color: inherit; text-decoration: none; }
   /* Ensure left spacing specifically for the selected sections */
   .services .container, .company .container, .contact .container, .intro .container, .works .container, .founder .container, .faq .container { padding-left: 40px; padding-right: 24px; }
   .nav { display: none; }
+  .company-table tr { display: block; padding: 10px 0; border-bottom: 1px solid rgba(24,7,7,0.1); }
+  .company-table th, .company-table td { display: block; width: auto; padding: 0; border: none; }
+  .company-table th { font-size: 12px; color: rgba(24,7,7,0.6); line-height: 1.8; }
+  .company-table td { line-height: 2; }
   .service-detail { grid-template-columns: 1fr; row-gap: 0; }
   .service-detail dt { margin-top: 8px; }
   .hero-inner { grid-template-columns: 1fr; gap: 64px; }
