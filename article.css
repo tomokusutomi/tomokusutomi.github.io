@@ -32,6 +32,15 @@
 .cta h2 { margin-top: 0; }
 .cta-button { display: inline-block; background: #FF3702; color: #fff; padding: 12px 32px; border-radius: 999px; font-weight: 500; margin-top: 8px; transition: opacity 0.2s; }
 .cta-button:hover { opacity: 0.85; }
+.article .article-list { margin-top: 24px; }
+.article .article-list li { border-top: 1px solid rgba(24,7,7,0.12); border-bottom: none; }
+.article .article-list li:last-child { border-bottom: 1px solid rgba(24,7,7,0.12); }
+.article .article-list a { display: block; padding: 20px 0; }
+.article .article-list-label { display: block; font-size: 12px; color: #FF3702; letter-spacing: 0.06em; line-height: 1.8; }
+.article .article-list-date { color: rgba(24,7,7,0.45); margin-left: 12px; }
+.article .article-list-title { display: block; font-size: 17px; font-weight: 700; line-height: 1.7; margin: 2px 0 4px; }
+.article .article-list a:hover .article-list-title { color: #FF3702; }
+.article .article-list-desc { display: block; font-size: 14px; color: rgba(24,7,7,0.7); line-height: 1.9; }
 .sources { font-size: 12px; color: rgba(24,7,7,0.5); margin-top: 40px; }
 @media (max-width: 768px) {
   .article { padding: 80px 0 48px; }
