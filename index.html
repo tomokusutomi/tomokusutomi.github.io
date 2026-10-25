@@ -135,7 +135,7 @@
                 <a href="#services">事業内容</a>
                 <a href="#works">取り組み</a>
                 <a href="#faq">FAQ</a>
-                <a href="#contact" class="nav-cta">無料で相談する</a>
+                <a href="#contact" class="nav-cta" data-cta="header">無料で相談する</a>
             </nav>
         </div>
     </header>
@@ -187,7 +187,7 @@
                         <dt>費用の考え方</dt>
                         <dd>業務量や目的に応じて個別にご提案。成果報酬型にも対応。長崎県のAI活用関連補助金の活用もご相談いただけます</dd>
                     </dl>
-                    <a class="service-link" href="ai-hojokin/">長崎県のAI補助金でAI導入を始める方法 →</a>
+                    <a class="service-link" href="ai-hojokin/" data-article="ai-hojokin">長崎県のAI補助金でAI導入を始める方法 →</a>
                 </article>
                 <article class="service" id="ads">
                     <canvas class="service-icon" data-shape="tetra" width="192" height="192" aria-hidden="true"></canvas>
@@ -214,6 +214,7 @@
                         <dt>費用の考え方</dt>
                         <dd>構築・運営の範囲に応じて個別にご提案。EC売上の増加分を成果として定義する成果報酬型にも対応</dd>
                     </dl>
+                    <a class="service-link" href="hp-hojokin/" data-article="hp-hojokin">ホームページ制作に使える補助金 →</a>
                 </article>
                 </div>
                 <p class="note">※費用は案件ごとにご提案します（成果報酬型にも対応）。まずはお気軽にご相談ください。</p>
@@ -400,6 +401,7 @@
         if (!form.checkValidity()) { form.reportValidity(); return; }
         // スパム対策: ハニーポット入力あり / 表示から3秒未満の送信は静かに破棄
         if (form.website.value || Date.now() - openedAt < 3000) { form.style.display = 'none'; thanks.hidden = false; return; }
+        if (window.gtag) gtag('event', 'generate_lead', { method: 'contact_form' });
         var data = new FormData(form);
         data.delete('website');
         var params = new URLSearchParams(data).toString();
@@ -798,6 +800,7 @@
                 <a href="#founder">代表プロフィール</a>
                 <a href="#faq">よくあるご質問</a>
                 <a href="ai-hojokin/">記事：長崎県のAI補助金</a>
+                <a href="hp-hojokin/">記事：ホームページ制作の補助金</a>
                 <a href="#company">会社概要</a>
                 <a href="#contact">お問合せ</a>
             </nav>
@@ -806,6 +809,7 @@
             <small>© 2026 Nagasaki Kikaku, Inc.</small>
         </div>
     </footer>
+    <script src="ga-events.js" defer></script>
 </body>
 </html>
 
