@@ -178,7 +178,7 @@
 
                 <div class="service-grid">
                 <article class="service" id="ai">
-                    <div class="service-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="5" fill="currentColor"/><path d="M24 8v8M24 32v8M8 24h8M32 24h8" stroke="currentColor" stroke-width="2"/></svg></div>
+                    <canvas class="service-icon" data-shape="sphere" width="192" height="192" aria-hidden="true"></canvas>
                     <h3>AI活用支援</h3>
                     <p class="service-tag">中小企業向けのAI導入・定着支援</p>
                     <dl class="service-detail">
@@ -191,7 +191,7 @@
                     </dl>
                 </article>
                 <article class="service" id="ads">
-                    <div class="service-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40L24 8l16 32z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M16 40l8-16 8 16" fill="currentColor" opacity=".25"/></svg></div>
+                    <canvas class="service-icon" data-shape="tetra" width="192" height="192" aria-hidden="true"></canvas>
                     <h3>集客支援・広告運用</h3>
                     <p class="service-tag">来場・来店・問い合わせを増やす</p>
                     <dl class="service-detail">
@@ -204,7 +204,7 @@
                     </dl>
                 </article>
                 <article class="service" id="ec">
-                    <div class="service-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="9" y="9" width="15" height="15" fill="currentColor" opacity=".25"/><rect x="24" y="24" width="15" height="15" fill="currentColor" opacity=".25"/></svg></div>
+                    <canvas class="service-icon" data-shape="cube" width="192" height="192" aria-hidden="true"></canvas>
                     <h3>EC運営支援・Web制作</h3>
                     <p class="service-tag">オンラインで売れる仕組みをつくる</p>
                     <dl class="service-detail">
@@ -708,6 +708,32 @@
     },{passive:true});
   }
 })();
+    </script>
+    <script>
+    (function(){
+      // 事業内容のアイコン: ヒーローと同じ粒子シェーディングで球・三角錐・立方体を静止描画
+      var BRAND=[255,55,2], TILT=0.42, ANGLE=0.6, N=700;
+      function sphere(n){var o=[],ga=Math.PI*(3-Math.sqrt(5));for(var i=0;i<n;i++){var y=1-2*(i+.5)/n,r=Math.sqrt(Math.max(0,1-y*y)),t=ga*i;var p=[Math.cos(t)*r,y,Math.sin(t)*r];o.push({p:[p[0]*.92,p[1]*.92,p[2]*.92],n:p});}return o;}
+      var T=[[1,1,1],[1,-1,-1],[-1,1,-1],[-1,-1,1]].map(function(v){var s=1.08/Math.sqrt(3);return[v[0]*s,v[1]*s,v[2]*s];}),TF=[[0,1,2],[0,1,3],[0,2,3],[1,2,3]];
+      function tetra(n){var o=[],per=Math.ceil(n/4);for(var f=0;f<4;f++){var fc=TF[f],a=T[fc[0]],b=T[fc[1]],c=T[fc[2]];var ux=b[0]-a[0],uy=b[1]-a[1],uz=b[2]-a[2],vx=c[0]-a[0],vy=c[1]-a[1],vz=c[2]-a[2];var nx=uy*vz-uz*vy,ny=uz*vx-ux*vz,nz=ux*vy-uy*vx,l=Math.hypot(nx,ny,nz)||1;nx/=l;ny/=l;nz/=l;var cx=(a[0]+b[0]+c[0])/3,cy=(a[1]+b[1]+c[1])/3,cz=(a[2]+b[2]+c[2])/3;if(nx*cx+ny*cy+nz*cz<0){nx=-nx;ny=-ny;nz=-nz;}var G=Math.floor(Math.sqrt(per));for(var i=0;i<G;i++)for(var j=0;j<G-i;j++){var u=(i+1/3)/G,v=(j+1/3)/G;o.push({p:[a[0]+ux*u+vx*v,a[1]+uy*u+vy*v,a[2]+uz*u+vz*v],n:[nx,ny,nz]});if(i+j<G-1){u=(i+2/3)/G;v=(j+2/3)/G;o.push({p:[a[0]+ux*u+vx*v,a[1]+uy*u+vy*v,a[2]+uz*u+vz*v],n:[nx,ny,nz]});}}}return o;}
+      function cube(n){var o=[],s=.8,G=Math.floor(Math.sqrt(n/6)),F=[[1,0],[-1,0],[1,1],[-1,1],[1,2],[-1,2]];for(var f=0;f<6;f++){var sg=F[f][0],ax=F[f][1];for(var i=0;i<G;i++)for(var j=0;j<G;j++){var u=(-1+2*(i+.5)/G)*s,v=(-1+2*(j+.5)/G)*s,p,nm;if(ax===0){p=[sg*s,u,v];nm=[sg,0,0];}else if(ax===1){p=[u,sg*s,v];nm=[0,sg,0];}else{p=[u,v,sg*s];nm=[0,0,sg];}o.push({p:p,n:nm});}}return o;}
+      var SH={sphere:sphere,tetra:tetra,cube:cube};
+      var ca=Math.cos(ANGLE),sa=Math.sin(ANGLE),ct=Math.cos(TILT),st=Math.sin(TILT);
+      function rot(v){var x=v[0]*ca+v[2]*sa,z=-v[0]*sa+v[2]*ca;return[x,v[1]*ct-z*st,v[1]*st+z*ct];}
+      document.querySelectorAll('canvas.service-icon').forEach(function(cv){
+        var ctx=cv.getContext('2d'),W=cv.width,H=cv.height,s=W*(cv.dataset.shape==='tetra'?0.40:0.33),cx=W/2,cy=H/2+(cv.dataset.shape==='tetra'?W*0.04:0);
+        var pts=SH[cv.dataset.shape](N).map(function(q){var p=rot(q.p),n=rot(q.n);return{x:cx+p[0]*s,y:cy+p[1]*s,z:p[2],nz:n[2],lit:Math.max(0,n[0]*(-.35)+n[1]*(-.5)+n[2]*.79)};});
+        pts.sort(function(a,b){return a.z-b.z;});
+        var r=s*.082;
+        pts.forEach(function(q){
+          if(q.nz<-.05)return;
+          var cull=q.nz<.12?Math.max(0,(q.nz+.05)/.17):1;
+          var tone=.58+.42*Math.min(1,q.lit*1.25);
+          ctx.fillStyle='rgba('+(BRAND[0]*tone|0)+','+(BRAND[1]*tone|0)+','+(BRAND[2]*tone|0)+','+cull.toFixed(2)+')';
+          ctx.beginPath();ctx.arc(q.x,q.y,r,0,6.2832);ctx.fill();
+        });
+      });
+    })();
     </script>
     <script>
     (function(){
