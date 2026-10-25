@@ -69,12 +69,10 @@
           "foundingDate": "2025-07-07",
           "taxID": "4010901057737",
           "founder": { "@id": "https://www.nagasaki-kikaku.com/#founder" },
-          "address": {
-            "@type": "PostalAddress",
-            "addressRegion": "長崎県",
-            "addressLocality": "平戸市",
-            "addressCountry": "JP"
-          },
+          "location": [
+            { "@type": "Place", "name": "長崎県平戸市" },
+            { "@type": "Place", "name": "東京都" }
+          ],
           "areaServed": [
             { "@type": "AdministrativeArea", "name": "長崎県" },
             { "@type": "City", "name": "平戸市" }
@@ -274,7 +272,6 @@
                     <h2 id="founder-title">代表プロフィール</h2>
                 </div>
                 <div class="founder-inner">
-                <img class="founder-photo" src="assets/founder-placeholder.svg" alt="代表取締役 楠富 智太" width="160" height="160" loading="lazy">
                 <div>
                 <h3 class="founder-name">楠富 智太<span class="founder-role">代表取締役</span></h3>
                 <p>防衛大学校卒業後、陸上自衛隊に勤務。その後、AIスタートアップの株式会社ABEJA、株式会社博報堂でAI活用とマーケティングの実務を経験。現在はニューロテック企業 VIE株式会社の取締役COOを務めながら、長崎県平戸市で地域活性化に取り組み、2025年に株式会社ナガサキ企画を設立。東京と平戸の二拠点で活動。</p>
@@ -334,8 +331,8 @@
                         <td>代表取締役　楠富 智太</td>
                     </tr>
                     <tr>
-                        <th>所在地</th>
-                        <td>長崎県平戸市</td>
+                        <th>活動拠点</th>
+                        <td>東京／長崎県平戸市</td>
                     </tr>
                     <tr>
                         <th>法人番号</th>
@@ -791,7 +788,7 @@
         <div class="container footer-inner">
             <div class="footer-brand">
                 <img src="assets/logo.png" alt="株式会社ナガサキ企画" width="176" height="44" loading="lazy">
-                <p>株式会社ナガサキ企画<br>長崎県平戸市<br><a href="mailto:info@nagasaki-kikaku.com">info@nagasaki-kikaku.com</a></p>
+                <p>株式会社ナガサキ企画<br>東京／長崎県平戸市<br><a href="mailto:info@nagasaki-kikaku.com">info@nagasaki-kikaku.com</a></p>
             </div>
             <nav class="footer-nav" aria-label="フッターナビゲーション">
                 <a href="#about">ナガサキ企画について</a>
