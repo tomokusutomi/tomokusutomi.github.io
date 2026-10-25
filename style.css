@@ -51,6 +51,17 @@ a { color: inherit; text-decoration: none; }
 .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px; }
 .service { background: #fff; border-radius: 12px; padding: 28px 24px 24px; }
 .service-icon { width: 72px; height: 72px; display: block; margin: -8px 0 12px -8px; }
+.service-link { display: inline-block; margin-top: 16px; font-size: 13px; font-weight: 500; color: #FF3702; border-bottom: 1px solid transparent; }
+.service-link:hover { border-bottom-color: #FF3702; }
+.articles .section-inner { text-align: left; }
+.articles .section-title { display: flex; align-items: center; gap: 8px; }
+.article-list { list-style: none; padding: 0; margin: 8px 0 0; }
+.article-list li { border-top: 1px solid rgba(24,7,7,0.12); border-bottom: 1px solid rgba(24,7,7,0.12); }
+.article-list a { display: block; padding: 20px 0; }
+.article-list a:hover .article-list-title { color: #FF3702; }
+.article-list-label { display: block; font-size: 12px; color: #FF3702; letter-spacing: 0.06em; line-height: 1.8; }
+.article-list-title { display: block; font-size: 16px; font-weight: 700; line-height: 1.7; margin: 2px 0 4px; transition: color 0.2s; }
+.article-list-desc { display: block; font-size: 14px; color: rgba(24,7,7,0.7); line-height: 1.9; }
 .service-tag { margin: 0 0 16px; font-size: 13px; color: rgba(24,7,7,0.6); line-height: 1.8; }
 .service h3, .works h3 { font-size: 17px; letter-spacing: 0.03em; margin: 0 0 8px; }
 .service-detail { margin: 0; }
@@ -130,7 +141,7 @@ a { color: inherit; text-decoration: none; }
   /* Preserve 80px left margin on mobile */
   .container { padding-left: 40px; padding-right: 24px; }
   /* Ensure left spacing specifically for the selected sections */
-  .services .container, .company .container, .contact .container, .intro .container, .works .container, .founder .container, .faq .container { padding-left: 40px; padding-right: 24px; }
+  .services .container, .company .container, .contact .container, .intro .container, .works .container, .founder .container, .articles .container, .faq .container { padding-left: 40px; padding-right: 24px; }
   .nav { display: none; }
   .footer-inner { flex-direction: column; gap: 24px; }
   .footer-nav { grid-template-columns: 1fr; }
@@ -159,7 +170,7 @@ a { color: inherit; text-decoration: none; }
 }
 /* Ensure services appear below the bottom arrow and offset for header */
 .intro { padding-top: 40px; }
-.services, .works, .founder, .faq, .company, .contact { scroll-margin-top: 72px; }
+.services, .works, .founder, .articles, .faq, .company, .contact { scroll-margin-top: 72px; }
 
 
 /* 動きを減らす設定のユーザーへの配慮（粒子は静止画としてJS側で描画） */
