@@ -130,6 +130,11 @@ a { color: inherit; text-decoration: none; }
 .footer-brand a { text-decoration: underline; }
 .footer-nav { display: grid; grid-template-columns: repeat(2, auto); gap: 6px 32px; line-height: 1.9; }
 .footer-nav a:hover { color: #FF3702; }
+.ps-cell { display: flex; align-items: center; gap: 16px; }
+.ps-cell img { width: 150px; height: auto; flex: none; }
+.ps-cell span { font-size: 13px; color: rgba(24,7,7,0.75); line-height: 1.8; }
+.footer-ps { display: inline-block; margin-top: 16px; }
+.footer-ps img { width: 120px; height: auto; display: block; opacity: 0.85; }
 .footer small { display: block; text-align: center; font-size: 12px; color: rgba(24,7,7,0.5); }
 
 /* Reveal on scroll */
@@ -155,6 +160,7 @@ a { color: inherit; text-decoration: none; }
   .company-table th, .company-table td { display: block; width: auto; padding: 0; border: none; }
   .company-table th { font-size: 12px; color: rgba(24,7,7,0.6); line-height: 1.8; }
   .company-table td { line-height: 2; }
+  .ps-cell { flex-direction: column; align-items: flex-start; gap: 8px; }
   .service-grid, .works-block { grid-template-columns: 1fr; }
   .works-block { row-gap: 8px; }
   .founder-inner { flex-direction: column; }
