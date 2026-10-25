@@ -1,7 +1,7 @@
 /* Base */
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', system-ui, -apple-system, sans-serif; color: #180707; line-height: 2.4; font-size: 14px; background-color: #EAEAEC; }
-.container { max-width: 960px; margin: 0 auto; padding: 0 24px; padding-left: 80px; }
+.container { max-width: 880px; margin: 0 auto; padding: 0 40px; box-sizing: border-box; }
 .header .container { padding-left: 80px; }
 a { color: inherit; text-decoration: none; }
 
@@ -17,7 +17,7 @@ a { color: inherit; text-decoration: none; }
 /* Hero */
 .hero { position: relative; min-height: calc(100vh - 56px); display: flex; align-items: center; padding-bottom: 72px; overflow: hidden; }
 #hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
-.hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr minmax(200px, 320px); gap: clamp(40px, 6vw, 96px); align-items: center; }
+.hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr minmax(200px, 300px); gap: clamp(40px, 6vw, 96px); align-items: center; }
 .hero-copy h1 { font-size: clamp(32px, 3.8vw, 46px); line-height: 1.35; letter-spacing: 0.04em; margin: 0 0 20px; white-space: nowrap; }
 .hero-copy p { margin: 0; font-size: 14px; color: rgba(24,7,7,0.85); }
 /* 粒子アニメーションの位置決め用プレースホルダ（描画はcanvas側のJS） */
