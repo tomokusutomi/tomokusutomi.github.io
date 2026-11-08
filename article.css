@@ -42,6 +42,7 @@
 .article .article-list a:hover .article-list-title { color: #FF3702; }
 .article .article-list-desc { display: block; font-size: 14px; color: rgba(24,7,7,0.7); line-height: 1.9; }
 .sp { display: none; }
+.prompt { background: #fff; border-left: 3px solid #FF3702; border-radius: 4px; padding: 14px 16px; margin: 12px 0 16px; white-space: pre-wrap; word-break: break-word; font-family: inherit; font-size: 14px; line-height: 1.9; }
 .sources { font-size: 12px; color: rgba(24,7,7,0.5); margin-top: 40px; }
 @media (max-width: 768px) {
   .article { padding: 80px 0 48px; }
