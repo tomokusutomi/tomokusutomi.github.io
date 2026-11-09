@@ -182,7 +182,7 @@ a { color: inherit; text-decoration: none; }
 }
 /* Ensure services appear below the bottom arrow and offset for header */
 .intro { padding-top: 40px; }
-.services, .works, .founder, .articles, .faq, .company, .contact { scroll-margin-top: 72px; }
+.services, .works, .founder, .articles, .news, .faq, .company, .contact { scroll-margin-top: 72px; }
 
 
 /* 動きを減らす設定のユーザーへの配慮（粒子は静止画としてJS側で描画） */
